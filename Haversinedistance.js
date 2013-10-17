@@ -1,5 +1,5 @@
-var point1 = [38.898556, -77.037852],
-    point2 = [38.897147, -77.043934];
+var point1 = [38.89855, -77.03785],
+    point2 = [38.89714, -77.04393];
 
 var distHaversine = (function (p, b) {
     'use strict';
