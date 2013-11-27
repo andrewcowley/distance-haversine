@@ -1,7 +1,7 @@
 var point1 = [38.89855, -77.03785],
     point2 = [38.89714, -77.04393];
 
-var distHaversine = (function (p, b) {
+var distHaversine = (function (point1, point2) {
     'use strict';
 
     var cos = Math.cos,
@@ -17,8 +17,8 @@ var distHaversine = (function (p, b) {
             return (x * x);
         },
 
-        latlon1 = p,
-        latlon2 = b,
+        latlon1 = point1,
+        latlon2 = point2,
         R = 6371,
         dLat = toRad(latlon2[0] - latlon1[0]),
         dLon = toRad(latlon2[1] - latlon1[1]),
@@ -30,5 +30,7 @@ var distHaversine = (function (p, b) {
         d = R * c;
         
         return d;
-        
-}(point1, point2));
+
+});
+
+distHaversine(point1, point2);
